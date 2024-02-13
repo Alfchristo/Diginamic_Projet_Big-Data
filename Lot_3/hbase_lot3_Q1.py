@@ -14,17 +14,18 @@ Il calcule :
 - Calcule la somme des quantités pour chaque commande.
 - Calcule le nombre total de commandes pour chaque année.
 - Affiche la commande avec la plus grande somme de quantités vendues à Nantes.
+- Exporte les résultats dans un fichier CSV.
 - Ferme la connexion à HBase.
 
 ## Prérequis :
 
-- Avoir installé les modules `happybase` et `datetime`.
+- Avoir installé les modules `happybase`, `datetime` et `csv`.
 - Avoir une instance HBase accessible.
 
 ## Exemple d'utilisation :
 
 ```python
-python analyse_ventes_hbase.py
+python hbase_lot3_Q1.py
 
 
 ## Remarques :
@@ -32,6 +33,7 @@ python analyse_ventes_hbase.py
 - Ce script peut être facilement modifié pour analyser d'autres types de données HBase.
 - La plage de dates et le critère de filtrage sur la ville peuvent être modifiés en fonction des besoins.
 """
+
 import csv
 from datetime import datetime
 import happybase
@@ -41,7 +43,7 @@ connection = happybase.Connection('node175910-env-1839015-etudiant18.sh1.hidora.
 connection.open()
 
 # Sélectionner la table HBase
-table_name = 'my_test_4'  # Mettre à jour avec le nom de votre table HBase
+table_name = 'dataFromagerie'  # Mettre à jour avec le nom de votre table HBase
 table = connection.table(table_name)
 
 # Initialiser un dictionnaire pour stocker la somme des quantités par commande
@@ -86,7 +88,8 @@ if quantities_by_order:
 connection.close()
 
 # Export des résultats dans un fichier CSV
-csv_filename = '/datavolume1/resultats_lot3_1.csv'
+#csv_filename = '/datavolume1/resultats_lot3_1.csv' # Répertoire Hbase
+csv_filename = '../Output/Lot_3/resultats_lot3_1.csv'
 
 with open(csv_filename, mode='w', newline='') as file:
     writer = csv.writer(file)

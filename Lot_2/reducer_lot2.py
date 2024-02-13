@@ -89,14 +89,16 @@ df = pd.DataFrame(
 )
 
 # Enregistrement du DataFrame dans un fichier Excel
-df.to_excel("/datavolume1/lot2_exo1.xlsx", index=False)
+#df.to_excel("/datavolume1/resultats_lot2_3.xlsx", index=False) # Repertoire Hbase
+df.to_excel("./Output/Lot_2/resultats_lot2_3.xlsx", index=False)
 
 # Tracer un diagramme circulaire (pie chart)
 plt.pie(df["Moyennes Quantites de la Commande"], labels=df["Ville"], autopct='%1.1f%%', startangle=90)
 plt.title('Repartition des villes par rapport a la quantite Avec Hadoop')
 
 # Enregistrer le diagramme circulaire au format PDF
-plt.savefig('/datavolume1/PieChart01.pdf')
+# plt.savefig('/datavolume1/PieChart01.pdf') # Repertoire Hbase
+plt.savefig('./Output/Lot_2/resultats_lot2_2.pdf')
 
 # Afficher le diagramme circulaire (dans l'environnement adapté)
 #plt.show()

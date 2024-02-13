@@ -74,5 +74,6 @@ for codcde, values in sorted_commandes[:100]:
 df = pd.DataFrame(mydata, columns=["codcde", "ville", "qte", "timbrecde"])
 
 # Enregistrez le DataFrame dans un fichier Excel
-df.to_excel("/datavolume1/lot1_exo1.xlsx", index=False)
+#df.to_excel("/datavolume1/lot1_exo1.xlsx", index=False) #Répertoire Hbase
+df.to_excel("./Output/Lot_1/lot1_exo1.xlsx", index=False)
 

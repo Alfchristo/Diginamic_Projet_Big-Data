@@ -9,17 +9,18 @@ Ce script analyse un ensemble de données HBase pour identifier le client ayant 
 - Localise le client ayant payé les frais de timbrecde les plus élevés.
 - Calcule le nombre total de commandes et la somme des quantités pour ce client.
 - Affiche les informations du client avec les frais de timbrecde les plus élevés.
+- Exporte les informations du client vers un fichier Excel.
 - Ferme la connexion à HBase.
 
 ## Prérequis :
 
-- Avoir installé le module `happybase`.
+- Avoir installé les modules `happybase` et `pandas`.
 - Avoir une instance HBase accessible.
 
 ## Exemple d'utilisation :
 
 ```python
-python client_max_timbrecde.py
+python hbase_lot3_Q3.py
 
 
 ## Remarques :
@@ -36,7 +37,7 @@ connection = happybase.Connection('node175910-env-1839015-etudiant18.sh1.hidora.
 connection.open()
 
 # Sélectionner la table HBase
-table_name = 'my_test_4'  # Mettre à jour avec le nom de votre table HBase
+table_name = 'dataFromagerie'  # Mettre à jour avec le nom de votre table HBase
 table = connection.table(table_name)
 
 # Initialiser un dictionnaire pour stocker les informations du client avec les frais de timbrecde les plus élevés
@@ -82,7 +83,9 @@ connection.close()
 df = pd.DataFrame([max_timbre_client])
 
 # Exporter le DataFrame vers un fichier Excel
-excel_filename = '/datavolume1/resultats_clients.xlsx'
+#excel_filename = '/datavolume1/resultats_lot3_3.xlsx' # Répertoire Hbase
+excel_filename = '../Output/Lot_3/resultats_lot3_3.xlsx'
+
 df.to_excel(excel_filename, index=False)
 
 print(f"Les informations du client ont ete exportees dans le fichier Excel : {excel_filename}")

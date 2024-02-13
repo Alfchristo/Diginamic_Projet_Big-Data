@@ -9,17 +9,18 @@ Ce script analyse un ensemble de données HBase pour compter le nombre total de 
 - Convertit les dates en objets datetime.
 - Compte le nombre de commandes pour chaque année entre 2010 et 2015.
 - Affiche le nombre total de commandes par année.
+- Exporte un graphique à barres représentant le nombre total de commandes par année au format PDF.
 - Ferme la connexion à HBase.
 
 ## Prérequis :
 
-- Avoir installé les modules `happybase` et `datetime`.
+- Avoir installé les modules `happybase`, `datetime` et `matplotlib`.
 - Avoir une instance HBase accessible.
 
 ## Exemple d'utilisation :
 
 ```python
-python compte_commandes_par_annee.py
+python hbase_lot3_Q2.py
 
 
 ## Remarques :
@@ -40,7 +41,7 @@ connection = happybase.Connection('node175910-env-1839015-etudiant18.sh1.hidora.
 connection.open()
 
 # Sélectionner la table HBase
-table_name = 'my_test_4'  # Mettre à jour avec le nom de votre table HBase
+table_name = 'dataFromagerie'  # Mettre à jour avec le nom de votre table HBase
 table = connection.table(table_name)
 
 # Scanner les lignes de la table HBase
@@ -75,7 +76,8 @@ plt.ylabel('Nombre total de commandes')
 plt.title('Nombre total de commandes par année entre 2010 et 2015')
 
 # Sauvegarder le graphique au format PDF
-pdf_filename = 'total_orders_by_year.pdf'
+#pdf_filename = '/datavolume1/Lot_3/total_orders_by_year.pdf' # Répertoire Hbase
+pdf_filename = '../Output/Lot_3/resultats_lot3_2.pdf'
 plt.savefig(pdf_filename)
 
 # Afficher le graphique

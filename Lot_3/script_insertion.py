@@ -18,12 +18,13 @@ Ce script importe des données d'un fichier CSV vers une table HBase.
 * Exécutez le script avec Python.
 * Assurez-vous que le fichier CSV et la table HBase existent.
 """
+from datetime import datetime
 
 import pandas as pd
 import happybase
 
 # Configurer la connexion à HBase
-hbase_table = 'dataFromagerie'  # Nom de votre table HBase
+hbase_table = 'dataFromagerie2'  # Nom de votre table HBase
 connection = happybase.Connection('node175910-env-1839015-etudiant18.sh1.hidora.com', 11560)
 connection.open()
 
@@ -59,6 +60,9 @@ def import_data_to_hbase(csv_file_path, hbase_table):
 
     # Filtrer les lignes avec des valeurs datetime invalides
     df = df.dropna(subset=['datcde'])
+
+    # Filtrer les lignes avec une date supérieure ou égale à 01/01/2004
+    df = df[df['datcde'] >= datetime(2004, 1, 1)]
 
     # Convertir la colonne 'datcde' au format chaîne de caractères
     df['datcde'] = df['datcde'].dt.strftime('%Y-%m-%d %H:%M:%S')

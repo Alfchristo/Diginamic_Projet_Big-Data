@@ -75,7 +75,7 @@ plt.ylabel('Nombre total de commandes')
 plt.title('Nombre total de commandes par année entre 2010 et 2015')
 
 # Sauvegarder le graphique au format PDF
-pdf_filename = '/datavolume1/total_orders_by_year.pdf'
+pdf_filename = 'total_orders_by_year.pdf'
 plt.savefig(pdf_filename)
 
 # Afficher le graphique

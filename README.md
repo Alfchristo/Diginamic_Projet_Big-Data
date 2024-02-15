@@ -30,6 +30,9 @@ Pour Hadoop:
 Veuillez noter que le processus d'analyse et d'exécution des scripts doit être effectué avec soin pour garantir des résultats précis et fiables.
 
 
+
+Enoncé :
+
  LOT 1
 •
 Contexte :

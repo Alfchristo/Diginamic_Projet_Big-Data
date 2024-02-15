@@ -1,9 +1,9 @@
 # Projet-Big-Data
 Groupe : Christ / Fatima / Christopher / Dorian
 
-Langage nécessaire: Python 3.5 ou une version stable recommandée
+Langage requis : Python 3.5 ou une version stable recommandée
 
-Module Python à installer : Sys / Pandas / datetime / decimal / Matplotlib.pyplot / Sample / csv / happybase
+Modules Python à installer : Sys / Pandas / datetime / decimal / Matplotlib.pyplot / Sample / csv / happybase
 - sys
 - pandas
 - datetime

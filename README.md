@@ -3,7 +3,8 @@ Groupe : Christ / Fatima / Christopher / Dorian
 
 Langage requis : Python 3.5 ou une version stable recommandée
 
-Modules Python à installer : Sys / Pandas / datetime / decimal / Matplotlib.pyplot / Sample / csv / happybase
+Modules Python à installer :
+
 - sys
 - pandas
 - datetime

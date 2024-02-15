@@ -24,7 +24,7 @@ import pandas as pd
 import happybase
 
 # Configurer la connexion à HBase
-hbase_table = 'dataFromagerie2'  # Nom de votre table HBase
+hbase_table = 'dataFromagerie'  # Nom de votre table HBase
 connection = happybase.Connection('node175910-env-1839015-etudiant18.sh1.hidora.com', 11560)
 connection.open()
 
@@ -44,7 +44,7 @@ connection.create_table(hbase_table, column_families)
 table = connection.table(hbase_table)
 
 # Chemin vers votre fichier CSV
-csv_file_path = '../Input/dataw_fro04.csv'
+csv_file_path = '../Input/dataw_fro03.csv'
 
 
 # Fonction pour importer des données dans HBase en fonction des critères

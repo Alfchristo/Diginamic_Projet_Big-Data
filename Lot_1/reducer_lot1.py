@@ -72,7 +72,7 @@ for codcde, values in sorted_commandes[:100]:
 
 # Données à mettre dans le DataFrame
 df = pd.DataFrame(mydata, columns=["codcde", "ville", "qte", "timbrecde"])
-
+print(df)
 # Enregistrez le DataFrame dans un fichier Excel
 #df.to_excel("/datavolume1/lot1_exo1.xlsx", index=False) #Répertoire Hbase
 df.to_excel("./Output/Lot_1/lot1_exo1.xlsx", index=False)

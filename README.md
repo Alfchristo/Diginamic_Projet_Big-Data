@@ -1,95 +1,129 @@
-# Projet-Big-Data
+# Bienvenue sur le Projet-Big-Data 🚀
+
 Groupe : Christ / Fatima / Christopher / Dorian
 
-Langage requis : Python 3.5 ou une version stable recommandée
 
-Modules Python à installer :
+## 🔥 Modules Python et leurs fonctionnalités
 
-- sys
-- pandas
-- datetime
-- decimal
-- matplotlib.pyplot
-- sample
-- csv
-- happybase 
+- **Sys** :
 
-API utilisée: Apache Hbase Rest
+Fournit des fonctions pour manipuler l'environnement d'exécution Python.
+Utilisation : Récupérer les arguments de la ligne de commande (sys.argv), quitter le programme (sys.exit()).
 
-Ce dossier contient des scripts Python commentés avec des docstrings expliquant leurs objectifs et leur utilisation.
-L'utilisateur a le choix de lancer les scripts directement depuis un IDE compatible Python ou depuis Hadoop (nécessaire pour HBase - Lot3).
+- **Panda** :
 
--Attention ! Les répertoires des dossiers doivent être commentés et décommentés selon l'environnement (IDE/Hadoop).
+Bibliothèque pour la manipulation et l'analyse de données.
+Utilisation : Lire des fichiers CSV, nettoyer et transformer des données, calculer des statistiques descriptives.
 
-Pour Hadoop:
-- Exécution de l'environnement Hadoop et modification ou configuration des dossiers appropriés.
-- Lancement d'un job MapReduce avec la commande (exemple pour le lot 1):
-    - hadoop jar hadoop-streaming-2.7.2.jar -file mapper_lot1.py -mapper "python3 mapper_lot1.py" -file reducer_lot1.py -reducer "python3 reducer_lot1.py" -input input/dataw_fro03.csv -output output/output_lot1_exo1
-- Vérification des résultats dans le répertoire de sortie approprié.
+- **datetime**:
 
-Veuillez noter que le processus d'analyse et d'exécution des scripts doit être effectué avec soin pour garantir des résultats précis et fiables.
+Module pour travailler avec des dates et des heures.
+Utilisation : Calculer des différences de temps, formater et manipuler des dates.
+
+- **decimal** :
+
+Fournit un type de données pour les nombres décimaux avec une précision élevée.
+Utilisation : Calculs arithmétiques précis, contrôle de la précision des calculs.
+
+- **matplotlib.pyplot** :
+
+Bibliothèque pour créer des graphiques en 2D.
+Utilisation : Créer des graphiques linéaires, à barres, à secteurs (camembert), histogrammes, etc.
+
+- **random** :
+
+Module pour générer des nombres aléatoires.
+Utilisation : Générer des nombres aléatoires, choisir des éléments aléatoires dans une liste, mélanger des séquences.
+
+- **csv** :
+
+Module pour lire et écrire des fichiers CSV.
+Utilisation : Lire des données depuis des fichiers CSV, écrire des résultats dans des fichiers CSV.
+
+- **happybase** :
+
+Client Python pour Apache HBase, une base de données distribuée.
+Utilisation : Se connecter à HBase, effectuer des opérations CRUD sur les tables HBase.
+
+## 📚 Prérequis
+
+Avant de démarrer, assurez-vous d'avoir installé Python 3.5 ou une version stable recommandée.
+
+## API utilisée
+
+Apache HBase Rest
+
+## Description du projet
+
+Ce projet a été réalisé dans le cadre du cours de Data Sciences et utilise Hadoop, Python et Power BI pour analyser et traiter des données provenant d'une fromagerie. Le projet est divisé en plusieurs lots, chacun ayant des objectifs spécifiques.
+
+Les scripts Python sont commentés avec des docstrings expliquant leurs objectifs et leur utilisation. L'utilisateur peut lancer les scripts directement depuis un IDE compatible Python ou depuis Hadoop (nécessaire pour HBase - Lot 3).
+
+## Instructions pour l'exécution
+
+Pour Hadoop
+
+1. Exécution de l'environnement Hadoop et modification ou configuration des dossiers appropriés.
+
+2. Lancement d'un job MapReduce avec la commande (exemple pour le lot 1) :
+
+```hadoop jar hadoop-streaming-2.7.2.jar -file mapper_lot1.py -mapper "python3 mapper_lot1.py" -file reducer_lot1.py -reducer "python3 reducer_lot1.py" -input input/dataw_fro03.csv -output output/output_lot1_exo1````
 
 
+## Vérification des résultats dans le répertoire de sortie approprié.
 
-Enoncé :
+Rendu du projet
 
- LOT 1
-•
-Contexte :
-•
-Une Fromagerie (le client) a un datawarehouse depuis 2004 qui est représenté par le fichier csv fournit dans ce document.
-•
-Créer des jobs pour limiter le flux d’information (Mapper-Reducer) pour obtenir uniquement les informations voulues pour répondre au besoin du client décrit ci-dessous :
-•
-Le client désire les statistiques suivantes :
+LOT 1
 
-1) Filtrer les données selon les critères suivants :
-Entre 2006 et 2010,
-Avec uniquement les départements 53, 61 et 28
+Objectifs réalisés :
 
-2) A partir du point 1 : Ressortir dans un tableau des 100 meilleures commandes avec la ville, la somme des quantités des articles et la valeur de « timbrecde » (la notion de meilleures commandes : la somme des quantités la plus grande ainsi que le plus grand nombre de « timbrecde » )
+Filtrage des données entre 2006 et 2010 pour les départements 53, 61 et 28.
+ ```bash
+   hadoop jar hadoop-streaming-2.7.2.jar -file mapper lot1.py -mapper ”python3 mapper lot1.py” -file reducer lot1.py -reducer ”python3 reducer lot1.py” -input input/dataw fro03.csv -output output/output lot1 exo1
 
-3) Exporter le résultat dans un fichier Excel.
+Extraction des 100 meilleures commandes en termes de quantité totale et de nombre de « timbrecde ».
 
+```bash
 
+hadoop jar hadoop-streaming-2.7.2.jar -file mapper lot1.py -mapper ”python3 mapper lot1.py” -file reducer lot1.py -reducer ”python3 reducer lot1.py” -input input/dataw fro03.csv -output output/output lot1 exo1
+   
+Exportation des résultats dans un fichier Excel.
+ 
+Fichiers produits :     
+
+resultats_lot1.xlsx
 LOT 2
-•
-Contexte :
-•
-Une Fromagerie (le client) a un datawarehouse depuis 2004 qui est représenté par le fichier csv fournit dans ce document.
-•
-Le client désire les statistiques suivantes :
+Objectifs réalisés :
 
-1) Filtrer les données selon les critères suivants :
-Entre 2011 et 2016,
-Avec uniquement les départements 22, 49 et 53
+Filtrage des données entre 2011 et 2016 pour les départements 22, 49 et 53.
+Extraction aléatoire de 5% des 100 meilleures commandes avec des conditions spécifiques.
+Création d'un graphique en camembert (PIE) par ville et exportation des résultats dans un fichier Excel.
+Fichiers produits :
 
-2) A partir du point 1 : Ressortir de façon aléatoire de 5% des 100 meilleures commandes avec la ville, la somme des quantités des articles sans « timbrecli » (le timbrecli non renseigné ou à 0) avec la moyenne des quantités de chaque commande)
-Avoir un PDF avec un graphe (PIE) (par Ville)
-
-3) Exporter le résultat dans un fichier Excel.
-
+resultats_lot2.xlsx
+graphiques_lot2.pdf
 LOT 3
+Objectifs réalisés :
 
-(De votre poste local : interroger votre VM LINUX sur le port 9090 (port privé de votre VM =>
-prendre votre endpoint public correspondant)
-1. Mettre en place une base NoSQL HBASE pour stocker le contenu du fichier CSV afin
-d’interroger ce Data Warehouse avec des scripts python.
-· La meilleur commande de Nantes de l’année 2020.
-· Le nombre total de commandes effectuées entre 2010 et 2015, réparties par année
-· Le nom, le prénom, le nombre de commande et la somme des quantités d’objets du
-client qui a eu le plus de frais de timbrecde.
+Stockage du fichier CSV dans HBase.
+Analyses réalisées :
+Meilleure commande de Nantes en 2020.
+Nombre total de commandes de 2010 à 2015, réparti par année.
+Détails du client ayant le plus de frais de « timbrecde ».
+Fichiers produits :
 
-Créer un programme python (avec Panda) pour créer des graphes en pdf et des tableaux
-Excel et csv de votre importation dans HBase : § Question 1 partie 1 du lot 3 en csv § Question 2 partie 1 du lot 3 en barplot matplotib exporté en pdf § Question 3 partie 1 du lot 3 en excel
+resultats_lot3.csv
+graphiques_lot3.pdf
+resultats_lot3.xlsx
+LOT 4
+Objectifs réalisés :
 
-Lot 4
+Mise en œuvre d'un moteur de recherche avec Power BI pour interroger HBase.
+Création de graphiques pour les résultats des lots 1 et 2.
+Mise en place d'un tableau de bord interactif avec des graphiques supplémentaires et des requêtes personnalisées.
+Tableau de bord :
 
-(De votre poste local, importer dans le HBase de votre VM Linux)
-(De votre VM Windows, utiliser Power BI)
-• Mettre en oeuvre un moteur de recherche avec Power BI pour interroger le Data
-Warehouse HBase.
-· Pour répondre au Lot 1 et Lot 2 au niveau des résultats avec les graphes,
-· Vous avez carte blanche pour créer d’autres graphes , d’autres types de requêtes
-avec par exemple de la géolocalisation etc.
-· Mise en place d’un Dashboard interactif
+Tableau de bord interactif Power BI
+Remarques finales
+Le processus d'analyse et d'exécution des scripts a été effectué avec soin pour garantir des résultats précis et fiables. Les répertoires des dossiers ont été ajustés en fonction de l'environnement (IDE/Hadoop) utilisé.

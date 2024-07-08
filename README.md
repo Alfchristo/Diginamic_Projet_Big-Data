@@ -192,6 +192,11 @@ Tableau de bord interactif Power BI
 
 ![alt text](IMG_64C6F29599D5-1.jpeg)
 
-# Remarques finales
+# Conclusion et Perspectives
 
-Le processus d'analyse et d'exécution des scripts a été effectué avec soin pour garantir des résultats précis et fiables. Les répertoires des dossiers ont été ajustés en fonction de l'environnement utilisé.
+Le projet "La Fromagerie Fêtes du Brie" a permis de réaliser des analyses détaillées sur plusieurs périodes et régions, offrant une vue d'ensemble inédite des tendances de consommation.
+
+Les insights extraits ont permis d'optimiser significativement les stratégies de fidélisation. Le tableau de bord interactif développé offre désormais aux décideurs un outil puissant pour comprendre et anticiper les comportements des clients.
+
+Ce projet ouvre la voie à de nouvelles opportunités d'innovation dans l'industrie fromagère. Les prochaines étapes pourraient inclure l'intégration de l'intelligence artificielle pour la prédiction des tendances et l'automatisation des processus.
+ 

@@ -134,7 +134,8 @@ hadoop jar hadoop-streaming-2.7.2.jar -file mapper lot1.py -mapper ”python3 ma
    
 Exportation des résultats dans un fichier Excel
  
-resultats_lot1.xlsx:     
+Resultats_lot1.xlsx:     
+
 ![alt text](IMG_FFFDB1569795-1.jpeg)
 
 ## LOT 2
@@ -150,10 +151,10 @@ Fichiers produits :
 Extraction aléatoire de 5% des 100 meilleures commandes avec des conditions spécifiques.
 
 Création d'un graphique en camembert (PIE) par ville
+
 ![alt text](Resultats_Lot2_2.png)
 
 Exportation des résultats dans un fichier Excel.
-![alt text](Resultats_Lot2_2.png)
 
 ![alt text](Resultat_Lot2_3.png)
 
@@ -172,12 +173,15 @@ Analyses réalisées :
 Fichiers produits :
 
 Resultat Lot3_1
+
 ![alt text](Resultat_Lot3_1.png)
 
 Resultat Lot3_2
+
 ![alt text](Resultat_Lot3_2.png)
 
 Resultat Lot3_3
+
 ![alt text](Resultat_Lot3_3.png)
 
 ## LOT 4

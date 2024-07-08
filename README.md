@@ -71,11 +71,6 @@ pip install pandas numpy matplotlib happybase
 ```
 
 
-Utilisation
-Filtrage et Analyse des Données
-Exécuter les scripts de filtrage et d'analyse pour chaque lot :                                                                                                                # Pour le Lot 1                                                                                                                                                                                            sh Lot_1/start_lot1.sh                                                                                                                                                                                   # Pour le Lot 2                                                                                                                                                                                           sh Lot_2/start_lot2.sh
-Interroger HBase pour les requêtes du Lot 3 :                                                                                                                                 python Lot_3/hbase_lot3_Q1.py                                                                                                                                                               python Lot_3/hbase_lot3_Q2.py                                                                                                                                                          python Lot_3/hbase_lot3_Q3.py
-
 ## Instructions pour l'exécution
 
 Pour Hadoop

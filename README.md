@@ -2,6 +2,13 @@
 
 Groupe : Christ / Fatima / Christopher / Dorian
 
+## Description du projet
+
+Ce projet a été réalisé dans le cadre du cours de Data Sciences et utilise Hadoop, Python et Power BI pour analyser et traiter des données provenant d'une fromagerie. Le projet est divisé en plusieurs lots, chacun ayant des objectifs spécifiques.
+
+Les scripts Python sont commentés avec des docstrings expliquant leurs objectifs et leur utilisation. L'utilisateur peut lancer les scripts directement depuis un IDE compatible Python ou depuis Hadoop (nécessaire pour HBase - Lot 3).
+
+
 
 ## 🔥 Modules Python et leurs fonctionnalités
 
@@ -53,11 +60,21 @@ Avant de démarrer, assurez-vous d'avoir installé Python 3.5 ou une version sta
 
 Apache HBase Rest
 
-## Description du projet
+## 🚀 Pour commencer
 
-Ce projet a été réalisé dans le cadre du cours de Data Sciences et utilise Hadoop, Python et Power BI pour analyser et traiter des données provenant d'une fromagerie. Le projet est divisé en plusieurs lots, chacun ayant des objectifs spécifiques.
+Cloner et installer, aussi simple que ça :
 
-Les scripts Python sont commentés avec des docstrings expliquant leurs objectifs et leur utilisation. L'utilisateur peut lancer les scripts directement depuis un IDE compatible Python ou depuis Hadoop (nécessaire pour HBase - Lot 3).
+```bash
+git clone chttps://git@github.com:Diginamic-M09-Gr3/32123BC6-Big-Data.git
+cd projet-hadoop-big-data
+pip install pandas numpy matplotlib happybase
+```
+
+
+Utilisation
+Filtrage et Analyse des Données
+Exécuter les scripts de filtrage et d'analyse pour chaque lot :                                                                                                                # Pour le Lot 1                                                                                                                                                                                            sh Lot_1/start_lot1.sh                                                                                                                                                                                   # Pour le Lot 2                                                                                                                                                                                           sh Lot_2/start_lot2.sh
+Interroger HBase pour les requêtes du Lot 3 :                                                                                                                                 python Lot_3/hbase_lot3_Q1.py                                                                                                                                                               python Lot_3/hbase_lot3_Q2.py                                                                                                                                                          python Lot_3/hbase_lot3_Q3.py
 
 ## Instructions pour l'exécution
 
@@ -71,14 +88,38 @@ Pour Hadoop
 hadoop jar hadoop-streaming-2.7.2.jar -file mapper_lot1.py -mapper "python3 mapper_lot1.py" -file reducer_lot1.py -reducer "python3 reducer_lot1.py" -input input/dataw_fro03.csv -output output/output_lot1_exo1
 ```
 
+Pour HBase
 
-3. Vérification des résultats dans le répertoire de sortie approprié.
+1. Filtrage et Analyse des Données
+
+   Exécution des scripts de filtrage et d'analyse pour chaque lot :
+
+   ## LOT 1
+```bash
+   sh Lot_1/start_lot1.sh
+   ```
+
+   ## LOT 2
+```bash
+   sh Lot_2/start_lot2.sh
+   ```
+
+2. Interrogation de HBase pour les requêtes du Lot 3
+
+
+```bash
+    python Lot_3/hbase_lot3.py
+```
+
+
+## Vérification des résultats dans le répertoire de sortie approprié.
+
 
 Rendu du projet
 
 ## LOT 1
 
-gObjectifs réalisés :
+Objectifs réalisés :
 
 Filtrage des données entre 2006 et 2010 pour les départements 53, 61 et 28.
  ```bash
@@ -104,10 +145,16 @@ Filtrage des données entre 2011 et 2016 pour les départements 22, 49 et 53.
 ```bash
 hadoop jar hadoop-streaming-2.7.2.jar -file mapper_lot2.py -mapper "python3 mapper_lot2.py" -file reducer_lot2.py -reducer "python3 reducer_lot2.py" -input input/dataw_fro03.csv -output output/output_lot2_exo1
 ```
+Fichiers produits :
+
 Extraction aléatoire de 5% des 100 meilleures commandes avec des conditions spécifiques.
 
-Création d'un graphique en camembert (PIE) par ville et exportation des résultats dans un fichier Excel.
+Création d'un graphique en camembert (PIE) par ville
 ![alt text](Resultats_Lot2_2.png)
+
+Exportation des résultats dans un fichier Excel.
+![alt text](Resultats_Lot2_2.png)
+
 ![alt text](Resultat_Lot2_3.png)
 
 ## LOT 3
@@ -124,8 +171,13 @@ Analyses réalisées :
 
 Fichiers produits :
 
+Resultat Lot3_1
 ![alt text](Resultat_Lot3_1.png)
+
+Resultat Lot3_2
 ![alt text](Resultat_Lot3_2.png)
+
+Resultat Lot3_3
 ![alt text](Resultat_Lot3_3.png)
 
 ## LOT 4
@@ -138,8 +190,9 @@ Objectifs réalisés :
 Tableau de bord :
 
 Tableau de bord interactif Power BI
+
 ![alt text](IMG_64C6F29599D5-1.jpeg)
 
 # Remarques finales
 
-Le processus d'analyse et d'exécution des scripts a été effectué avec soin pour garantir des résultats précis et fiables. Les répertoires des dossiers ont été ajustés en fonction de l'environnement (IDE/Hadoop) utilisé.
+Le processus d'analyse et d'exécution des scripts a été effectué avec soin pour garantir des résultats précis et fiables. Les répertoires des dossiers ont été ajustés en fonction de l'environnement utilisé.

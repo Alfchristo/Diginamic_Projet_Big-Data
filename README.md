@@ -91,12 +91,12 @@ Pour HBase
 
    ## LOT 1
 ```bash
-   sh Lot_1/start_lot1.sh
+   Lot_1/start_lot1.sh
    ```
 
    ## LOT 2
 ```bash
-   sh Lot_2/start_lot2.sh
+   Lot_2/start_lot2.sh
    ```
 
 2. Interrogation de HBase pour les requêtes du Lot 3
@@ -118,7 +118,7 @@ Objectifs réalisés :
 
 Filtrage des données entre 2006 et 2010 pour les départements 53, 61 et 28.
  ```bash
-   hadoop jar hadoop-streaming-2.7.2.jar -file mapper lot1.py -mapper ”python3 mapper lot1.py” -file reducer lot1.py -reducer ”python3 reducer lot1.py” -input input/dataw fro03.csv -output output/output lot1 exo1
+   hadoop jar hadoop-streaming-2.7.2.jar -file mapper lot1.py -mapper ”python3 mapper lot1.py” -input input/dataw fro03.csv -output output/output lot1 exo1
    ```
 
 Extraction des 100 meilleures commandes en termes de quantité totale et de nombre de « timbrecde ».
@@ -131,7 +131,7 @@ Exportation des résultats dans un fichier Excel
  
 Resultats_lot1.xlsx:     
 
-![alt text](IMG_FFFDB1569795-1.jpeg)
+![alt text](assets/images/lot1.jpeg)
 
 ## LOT 2
 
@@ -147,11 +147,11 @@ Extraction aléatoire de 5% des 100 meilleures commandes avec des conditions sp�
 
 Création d'un graphique en camembert (PIE) par ville
 
-![alt text](Resultats_Lot2_2.png)
+![alt text](assets/images/Resultats_Lot2_2.png)
 
 Exportation des résultats dans un fichier Excel.
 
-![alt text](Resultat_Lot2_3.png)
+![alt text](assets/images/Resultat_Lot2_3.png)
 
 ## LOT 3
 
@@ -169,15 +169,15 @@ Fichiers produits :
 
 Resultat Lot3_1
 
-![alt text](Resultat_Lot3_1.png)
+![alt text](assets/images/Resultat_Lot3_1.png)
 
 Resultat Lot3_2
 
-![alt text](Resultat_Lot3_2.png)
+![alt text](assets/images/Resultat_Lot3_2.png)
 
 Resultat Lot3_3
 
-![alt text](Resultat_Lot3_3.png)
+![alt text](assets/images/Resultat_Lot3_3.png)
 
 ## LOT 4
 
@@ -190,7 +190,7 @@ Tableau de bord :
 
 Tableau de bord interactif Power BI
 
-![alt text](IMG_64C6F29599D5-1.jpeg)
+![alt text](assets/images/tab_bord.jpeg)
 
 # Conclusion et Perspectives
 

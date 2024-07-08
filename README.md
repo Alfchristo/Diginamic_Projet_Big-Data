@@ -78,7 +78,7 @@ Rendu du projet
 
 ## LOT 1
 
-Objectifs réalisés :
+gObjectifs réalisés :
 
 Filtrage des données entre 2006 et 2010 pour les départements 53, 61 et 28.
  ```bash
@@ -107,9 +107,8 @@ hadoop jar hadoop-streaming-2.7.2.jar -file mapper_lot2.py -mapper "python3 mapp
 Extraction aléatoire de 5% des 100 meilleures commandes avec des conditions spécifiques.
 
 Création d'un graphique en camembert (PIE) par ville et exportation des résultats dans un fichier Excel.
-[text](../../Downloads/resultats_lot2_2.pdf)
-resultats_lot2.xlsx: 
-[text](../../Downloads/resultats_lot2_3.xlsx)
+![alt text](Resultats_Lot2_2.png)
+![alt text](Resultat_Lot2_3.png)
 
 ## LOT 3
 
@@ -125,9 +124,9 @@ Analyses réalisées :
 
 Fichiers produits :
 
-[text](../../Downloads/resultats_lot3_1.csv)
-[text](../../Downloads/resultats_lot3_2.pdf)
-[text](../../Downloads/resultats_lot3_3.xlsx)
+![alt text](Resultat_Lot3_1.png)
+![alt text](Resultat_Lot3_2.png)
+![alt text](Resultat_Lot3_3.png)
 
 ## LOT 4
 

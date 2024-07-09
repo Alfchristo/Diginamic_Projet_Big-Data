@@ -56,9 +56,6 @@ Utilisation : Se connecter à HBase, effectuer des opérations CRUD sur les tabl
 
 Avant de démarrer, assurez-vous d'avoir installé Python 3.5 ou une version stable recommandée.
 
-## API utilisée
-
-Apache HBase Rest
 
 ## 🚀 Pour commencer
 
